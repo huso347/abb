@@ -1,108 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
 </head>
 
 <style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        list-style: none;
+  
+  .div-main{
+    width:100%;
+    height:500px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .box{
+    width:250px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .box:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box>.img-box{
+    overflow: hidden;
+  }
+  
+  .box>.img-box>img{
+    width:100%;
+    transition: 0.3s;
+  }
+ 
+  .box:hover>.img-box img{
+    scale: 1.1;
+  }
+  
+  .span{
+    text-align: center;
+    width:50px;
+    background:rgba(159, 160, 174, 0.2);
+    padding: 5px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top:190px;
+    backdrop-filter: blur(10px);
+  }
+  
+  p{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  
+  button{
+    background-color: white;
+    border:none;
+    padding: 5px;
+    font-weight: 600;
+    margin: 5px;
+  }
+  
+  button:hover{
+    background-color: rgba(8, 171, 241, 1);
+    color:white;
+    transition-duration:0.5s;
+    
+  }
+  
+  @media (max-width:1024px){
+    .div-main{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      margin-left: 150px;
     }
-
-    body {
-        background-color: black;
+    
+  }
+  
+  @media (max-width:768px){
+    .div-main{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
     }
-
-    header {
-        background-color: black;
-        height: 70px;
-        padding: 20px;
-    }
-
-    header>.u1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    header>.u1>li>a {
-        color: rgb(255, 86, 1);
-    }
-
-    header>.u1>button {
-        display: none;
-    }
-
-    @media(max-width:1024px) {
-        #tak {
-            display: none;
-        }
-
-        header>.u1>button {
-            display: block;
-            background-color: chartreuse;
-            padding: 7px;
-        }
-
-
-
-    .u2 {
-        display: none;
-        background-color: darkmagenta;
-        width: 300px;
-        text-align: center;
-        margin-left: auto;
-    }
-
+    
+  }
+  
 </style>
 
 <body>
-
-    <header>
-
-        <ul class="u1">
-            <a href="">LOGO</a>
-            <li id="tak"><a href="">Menu</a></li>
-            <li id="tak"><a href="">About</a></li>
-            <li id="tak"><a href="">Contact</a></li>
-            <button class="btn">LoGiN</button>
-        </ul>
-
-        <ul class="u2">
-            <li id="tak2"><a href="">Menu</a></li>
-            <li id="tak2"><a href="">About</a></li>
-            <li id="tak2"><a href="">Contact</a></li>
-        </ul>
-
-
-    </header>
-
-
+  
+  <div class="div-main">
+    
+    <div class="box">
+     <div class="img-box"><img src="c:\Users\lenova\Downloads\97624d65-74d9-4658-bafc-16efdb4d4506 (1).jfif" alt="" /></div>
+      <div class="span"><span>$30</span></div>
+      <p>Anime #0001 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"/></svg></p>
+      <button>Buy Product</button>
+    </div>
+    
+    <div class="box">
+     <div class="img-box"><img src="c:\Users\lenova\Downloads\9b6b4f37-f89d-4f8c-82b3-55cb7027cc37.jfif" alt="" /></div>
+      <div class="span"><span>$3000</span></div>
+      <p>Anime #0002 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"/></svg></p>
+      <button>Buy Product</button>
+    </div>
+    
+    <div class="box">
+      <div class="img-box"><img src="c:\Users\lenova\Downloads\146bf031-4832-4edf-9f05-a506898abbcd.jfif" alt="" /></div>
+      <div class="span"><span>$100</span></div>
+      <p>Anime #0003 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"/></svg></p>
+      <button>Buy Product</button>
+    </div>
+    
+    <div class="box">
+      <div class="img-box"><img src="c:\Users\lenova\Downloads\d9593505-5a1a-4854-9295-d7d6bba46a0b.jfif" alt="" /></div>
+      <div class="span"><span>$2000</span></div>
+      <p>Anime #0004 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"/></svg></p>
+      <button>Buy Product</button>
+    </div>
+  </div>
+    
+    
     <script>
-
-        $(document).ready(function () {
-            $('.btn').click(function () {
-                $('.u2').animate({
-                    'width': 'toggle'
-                })
-            })
-        })
-
+      console.log(window.innerWidth)
     </script>
-
 </body>
 
-</html>
+</html>  
