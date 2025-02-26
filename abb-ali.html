@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    header {
+        background-color: black;
+        height: 70px;
+        padding: 20px;
+    }
+
+    header>.u1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header>.u1>li>a {
+        color: rgb(255, 86, 1);
+    }
+
+    header>.u1>button {
+        display: none;
+    }
+
+    @media(max-width:1024px) {
+        #tak {
+            display: none;
+        }
+
+        header>.u1>button {
+            display: block;
+            background-color: chartreuse;
+            padding: 7px;
+        }
+
+
+
+    }
+
+    .u2 {
+        display: none;
+        background-color: darkmagenta;
+        width: 300px;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    .u2>li {}
+</style>
+
+<body>
+
+    <header>
+
+        <ul class="u1">
+            <a href="">LOGO</a>
+            <li id="tak"><a href="">Menu</a></li>
+            <li id="tak"><a href="">About</a></li>
+            <li id="tak"><a href="">Contact</a></li>
+            <button class="btn">LoGiN</button>
+        </ul>
+
+        <ul class="u2">
+            <li id="tak2"><a href="">Menu</a></li>
+            <li id="tak2"><a href="">About</a></li>
+            <li id="tak2"><a href="">Contact</a></li>
+        </ul>
+
+
+    </header>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('.btn').click(function () {
+                $('.u2').animate({
+                    'width': 'toggle'
+                })
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
